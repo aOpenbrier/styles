@@ -1,0 +1,41 @@
+* {
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav { 
+    width: 100vw;
+    background-color: rgb(211, 211, 211);
+}
+.dropdown-wrapper {
+    width: 100px;
+    position: relative;
+    text-align: center;
+}
+
+.dropdown-trigger {
+    background-color: rgb(220, 220, 220);
+    padding: 10px;
+}
+
+.dropdown-content {
+    overflow: hidden;
+    position: absolute;
+    height: 0px;
+    width: 100%;
+    background-color: rgb(211, 211, 211);
+    transition: height .5s;
+}
+
+.dropdown-content li {
+    padding: 10px;
+}
+
+.dropdown-content li:hover {
+    background-color: rgb(220, 220, 220);
+}
+.open {
+    height: 82px;
+}

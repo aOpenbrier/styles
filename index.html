@@ -7,6 +7,35 @@
     <link rel="stylesheet" href="./assets/index.css">
 </head>
 <body>
-    
+    <nav>
+        <div class="dropdown-wrapper" onclick="dropMenu()">
+            <div class="dropdown-trigger">CSS</div>
+            <ul id="js-dropdown-content" class="dropdown-content">
+                <li>LESS</li>
+                <li>SASS</li>
+            </ul>
+        </div>
+    </nav>
+<script>
+    // Add open class to dropdown menu
+    function dropMenu() {
+    document.getElementById('js-dropdown-content').classList.toggle('open')
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (event) {
+        if (!event.target.matches('.dropdown-trigger')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('open')) {
+                    openDropdown.classList.remove('open');
+                }
+            }
+        }
+    }
+</script>
+
 </body>
 </html>
