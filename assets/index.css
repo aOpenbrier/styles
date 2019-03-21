@@ -15,27 +15,74 @@ nav {
     text-align: center;
 }
 
+.dropdown-wrapper li {
+    list-style-type: none;
+}
+
+.dropdown-wrapper li:focus, .dropdown-wrapper li:focus-within, .dropdown-wrapper li:hover  {
+    background-color: rgb(230, 230, 230);
+}
+
 .dropdown-trigger {
     background-color: rgb(220, 220, 220);
-    padding: 10px;
+    height: 2.5em;
+    line-height: 2.5em;
+    overflow: hidden;
 }
 
 .dropdown-content {
-    overflow: hidden;
     position: absolute;
-    height: 0px;
+    max-height: 0em;
     width: 100%;
     background-color: rgb(211, 211, 211);
-    transition: height .5s;
+    transition: max-height .3s;
 }
 
 .dropdown-content li {
-    padding: 10px;
-}
-
-.dropdown-content li:hover {
+    height: 2.5em;
+    line-height: 2.5em;
+    max-height: inherit;
     background-color: rgb(220, 220, 220);
 }
-.open {
-    height: 82px;
+
+.dropdown-content > li > div {
+    max-height: inherit;
+    overflow: hidden;
 }
+
+.dropdown-subtrigger {
+    position: relative;
+}
+
+.dropdown-subtrigger:focus,
+.dropdown-subtrigger:focus-within,
+.dropdown-subtrigger:hover {
+    border-right: solid black 1px;
+    background: lightgrey;
+}
+.dropdown-subtrigger:focus .dropdown-subcontent,
+.dropdown-subtrigger:focus-within .dropdown-subcontent,
+.dropdown-subtrigger:hover .dropdown-subcontent{
+    left: 100px;
+    visibility: visible;
+}
+
+.dropdown-subcontent {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    z-index: -1;
+    width: 100px;
+    background-color: rgb(211, 211, 211);
+    transition: left .5s;
+}
+
+
+
+
+.open {
+    max-height: 5em;
+    overflow: visible
+}
+

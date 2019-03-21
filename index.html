@@ -9,10 +9,16 @@
 <body>
     <nav>
         <div class="dropdown-wrapper" onclick="dropMenu()">
-            <div class="dropdown-trigger">CSS</div>
+            <div class="dropdown-trigger"><span>CSS</span></div>
             <ul id="js-dropdown-content" class="dropdown-content">
-                <li>LESS</li>
-                <li>SASS</li>
+                <li class='dropdown-subtrigger'>
+                    <div>LESS</div>
+                    <ul class='dropdown-subcontent'>
+                        <li>About</li>
+                        <li>Test Page</li>
+                    </ul>
+                </li>
+                <li><div>SASS</div></li>
             </ul>
         </div>
     </nav>
